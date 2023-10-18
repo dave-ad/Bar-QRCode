@@ -28,7 +28,7 @@ namespace QRcode.Controllers
                 GeneratedBarcode barcode = QRCodeWriter.CreateQrCode(GenerateQRCode.QRInput, 200);
                 barcode.AddBarcodeValueTextBelowBarcode();
                 barcode.SetMargins(10);
-                barcode.ChangeBarCodeColor(Color.Blue);
+                barcode.ChangeBarCodeColor(Color.Black);
                 string path = Path.Combine(_iwebhostenvironment.WebRootPath, "GeneratedQRCode");
                 if (!Directory.Exists(path))
                 {
@@ -37,12 +37,14 @@ namespace QRcode.Controllers
                 string filePath = Path.Combine(_iwebhostenvironment.WebRootPath, "GeneratedQRCode/qrcode.png");
                 barcode.SaveAsPng(filePath);
                 string filename = Path.GetFileName(filePath);
+                string imageUrl = $"{this.Request.Scheme}:{this.Request.Host}{this.Request.PathBase}" + "/GeneratedQRCode/ " + filename;
+                ViewBag.QrCodeUrl = imageUrl;
             }
             catch (Exception)
             {
-
                 throw;
             }
+            return View();
         }
 
         public IActionResult Index()
@@ -58,7 +60,8 @@ namespace QRcode.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            //return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }
