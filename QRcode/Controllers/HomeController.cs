@@ -1,67 +1,49 @@
-﻿using IronBarCode;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using QRcode.Models;
-using System.Diagnostics;
 
-namespace QRcode.Controllers
+namespace QRcode.Controllers;
+
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly ILogger<HomeController> _logger;
+    private readonly IWebHostEnvironment _iwebhostenvironment;
+    private readonly QRCodeService.QRCodeService _qrCodeService;
+
+    public HomeController(ILogger<HomeController> _logger, IWebHostEnvironment _webHostEnvironment, QRCodeService.QRCodeService qrCodeService)
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IWebHostEnvironment _iwebhostenvironment;
+        _logger = _logger ?? throw new ArgumentNullException(nameof(_logger));
+        _iwebhostenvironment = _webHostEnvironment ?? throw new ArgumentNullException(nameof(_webHostEnvironment));
+        _qrCodeService = qrCodeService ?? throw new ArgumentNullException(nameof(qrCodeService));
+    }
 
-        public HomeController(IWebHostEnvironment _webHostEnvironment)
+    public IActionResult CreateQRCode(GenerateQRCodeModel generateQRCode)
+    {
+        try
         {
-            _iwebhostenvironment = _webHostEnvironment;
+            string imageUrl = _qrCodeService.GenerateQRCode(generateQRCode.QRInput, _iwebhostenvironment.WebRootPath);
+            ViewBag.QrCodeUrl = imageUrl;
+        }
+        catch (Exception ex)
+        {
+            ViewBag.ErrorMessage = "Failed to generate and display QR code.";
         }
 
-        public  IActionResult CreateQRCode()
-        {
-            return View();
-        }
+        return View();
+    }
 
-        [HttpPost]
-        public IActionResult CreateQRCode(GenerateQRCodeModel GenerateQRCode)
-        {
-            try
-            {
-                GeneratedBarcode barcode = QRCodeWriter.CreateQrCode(GenerateQRCode.QRInput, 200);
-                barcode.AddBarcodeValueTextBelowBarcode();
-                barcode.SetMargins(10);
-                barcode.ChangeBarCodeColor(Color.Black);
-                string path = Path.Combine(_iwebhostenvironment.WebRootPath, "GeneratedQRCode");
-                if (!Directory.Exists(path))
-                {
-                    Directory.CreateDirectory(path);
-                }
-                string filePath = Path.Combine(_iwebhostenvironment.WebRootPath, "GeneratedQRCode/qrcode.png");
-                barcode.SaveAsPng(filePath);
-                string filename = Path.GetFileName(filePath);
-                string imageUrl = $"{this.Request.Scheme}:{this.Request.Host}{this.Request.PathBase}" + "/GeneratedQRCode/ " + filename;
-                ViewBag.QrCodeUrl = imageUrl;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            return View();
-        }
+    public IActionResult Index()
+    {
+        return View();
+    }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+    public IActionResult Privacy()
+    {
+        return View();
+    }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            //return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-            return View();
-        }
+    public IActionResult Error()
+    {
+        //return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View();
     }
 }

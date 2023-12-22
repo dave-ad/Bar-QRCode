@@ -4,16 +4,17 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>QRCode_API</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BarCode" Version="2023.12.4" />
-    <PackageReference Include="QRCoder" Version="1.4.3" />
-    <PackageReference Include="ZXing.Net" Version="0.16.9" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\QRCodeService\CodeService.csproj" />
+    <ProjectReference Include="..\QRcode\QRcode.csproj" />
   </ItemGroup>
 
 </Project>
