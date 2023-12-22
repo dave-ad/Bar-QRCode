@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using QRcode.Models;
+using CodeGen.Models;
 
 namespace QRCode_API.Controllers;
 
@@ -16,11 +16,11 @@ public class QRCodeAPIController : ControllerBase
     }
 
     [HttpPost("GenerateQRCode")]
-    public IActionResult GenerateQRCode([FromBody] GenerateQRCodeModel generateQRCode)
+    public IActionResult GenerateQRCode([FromBody] GenerateCodeModel generateQRCode)
     {
         try
         {
-            string imageUrl = _qrCodeService.GenerateQRCode(generateQRCode.QRInput, this.Request.Host.Value);
+            string imageUrl = _qrCodeService.GenerateQRCode(generateQRCode.Input, this.Request.Host.Value);
             return Ok(new { QrCodeUrl = imageUrl });
         }
         catch (Exception ex)

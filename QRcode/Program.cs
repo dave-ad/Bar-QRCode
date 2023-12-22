@@ -5,6 +5,9 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<QRCodeService.QRCodeService>();
 builder.Services.AddTransient<QRCodeService.QRCodeService>();
+
+builder.Services.AddScoped<BarCodeService.BarCodeService>();
+builder.Services.AddTransient<BarCodeService.BarCodeService>();
 builder.Services.AddLogging(); // Add this line to configure logging
 
 builder.Services.AddLogging(builder =>
@@ -31,6 +34,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=CreateQRCode}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

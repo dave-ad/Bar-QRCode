@@ -1,29 +1,29 @@
 ﻿@model CodeGen.Models.GenerateCodeModel
 
 @{
-    ViewData["Title"] = "CreateQRCode";
+    ViewData["Title"] = "CreateBarCode";
 }
 
-<h1>Create QR Code</h1>
+<h1>Create Bar Code</h1>
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CreateQRCode">
+        <form asp-action="CreateBarCode">
             <div class="form-group">
                 <label asp-for="Input" class="control-label"></label>
-                <input asp-for="Input" class="form-control"/>
+                <input asp-for="Input" class="form-control" />
                 <span asp-validation-for="Input" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Generate QR Code" class="btn btn-primary"/>
+                <input type="submit" value="Generate Bar Code" class="btn btn-primary" />
             </div>
             <div class="form-group">
-                @if (!string.IsNullOrEmpty(ViewBag.QrCodeUrl))
+                @if (!string.IsNullOrEmpty(ViewBag.BarCodeUrl))
                 {
-                    <img src="~/@ViewBag.QrCodeUrl" alt="QR Code">
+                    <img src="~/@ViewBag.BarCodeUrl" alt="Bar Code">
                 }
                 else
                 {
-                    <p>No QR Code available.</p>
+                    <p>No Bar Code available.</p>
                 }
             </div>
         </form>

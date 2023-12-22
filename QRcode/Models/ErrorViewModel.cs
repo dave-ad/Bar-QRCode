@@ -1,4 +1,4 @@
-namespace QRcode.Models
+namespace CodeGen.Models
 {
     public class ErrorViewModel
     {

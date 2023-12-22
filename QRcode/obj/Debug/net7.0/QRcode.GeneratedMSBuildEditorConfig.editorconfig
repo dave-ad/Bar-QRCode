@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\David\source\repos\Bar-QRCode\QRcode
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/David/source/repos/Bar-QRCode/QRcode/Views/Home/CreateBarCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVCYXJDb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/David/source/repos/Bar-QRCode/QRcode/Views/Home/CreateQRCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVRUkNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

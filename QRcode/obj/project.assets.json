@@ -776,17 +776,30 @@
           }
         }
       },
-      "CodeService/1.0.0": {
+      "BarCodeService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "BarCode": "2023.12.4"
         },
         "compile": {
-          "bin/placeholder/CodeService.dll": {}
+          "bin/placeholder/BarCodeService.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CodeService.dll": {}
+          "bin/placeholder/BarCodeService.dll": {}
+        }
+      },
+      "QRCodeService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "BarCode": "2023.12.4"
+        },
+        "compile": {
+          "bin/placeholder/QRCodeService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QRCodeService.dll": {}
         }
       }
     }
@@ -1737,16 +1750,22 @@
         "zxing.net.nuspec"
       ]
     },
-    "CodeService/1.0.0": {
+    "BarCodeService/1.0.0": {
       "type": "project",
-      "path": "../QRCodeService/CodeService.csproj",
-      "msbuildProject": "../QRCodeService/CodeService.csproj"
+      "path": "../BarCodeService/BarCodeService.csproj",
+      "msbuildProject": "../BarCodeService/BarCodeService.csproj"
+    },
+    "QRCodeService/1.0.0": {
+      "type": "project",
+      "path": "../QRCodeService/QRCodeService.csproj",
+      "msbuildProject": "../QRCodeService/QRCodeService.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "BarCode >= 2023.12.4",
-      "CodeService >= 1.0.0",
+      "BarCodeService >= 1.0.0",
+      "QRCodeService >= 1.0.0",
       "QRCoder >= 1.4.3",
       "ZXing.Net >= 0.16.9"
     ]
@@ -1757,9 +1776,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\QRcode.csproj",
-      "projectName": "QRcode",
-      "projectPath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\QRcode.csproj",
+      "projectUniqueName": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\CodeGen.csproj",
+      "projectName": "CodeGen",
+      "projectPath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\CodeGen.csproj",
       "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\obj\\",
       "projectStyle": "PackageReference",
@@ -1778,8 +1797,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRCodeService\\CodeService.csproj": {
-              "projectPath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRCodeService\\CodeService.csproj"
+            "C:\\Users\\David\\source\\repos\\Bar-QRCode\\BarCodeService\\BarCodeService.csproj": {
+              "projectPath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\BarCodeService\\BarCodeService.csproj"
+            },
+            "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRCodeService\\QRCodeService.csproj": {
+              "projectPath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRCodeService\\QRCodeService.csproj"
             }
           }
         }

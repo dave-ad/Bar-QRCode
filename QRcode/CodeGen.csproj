@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QRCodeService\CodeService.csproj" />
+    <ProjectReference Include="..\QRCodeService\QRCodeService.csproj" />
+    <ProjectReference Include="..\BarCodeService\BarCodeService.csproj" />
   </ItemGroup>
 
 </Project>

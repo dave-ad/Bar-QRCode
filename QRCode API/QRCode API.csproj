@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QRCodeService\CodeService.csproj" />
-    <ProjectReference Include="..\QRcode\QRcode.csproj" />
+    <ProjectReference Include="..\QRCodeService\QRCodeService.csproj" />
+    <ProjectReference Include="..\QRcode\CodeGen.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace QRcode.Models
+namespace CodeGen.Models
 {
-    public class GenerateQRCodeModel
+    public class GenerateCodeModel
     {
         [Required]
         [Display(Name = "Enter Text")]
-        public string QRInput { get; set; }
+        public string Input { get; set; }
     }
 }
