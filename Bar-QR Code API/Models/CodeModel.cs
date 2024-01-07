@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CodeGen.Models;
+namespace Bar_QR_Code_API.Models;
 
-public class GenerateCodeModel
+public class CodeModel
 {
     [Required]
     [Display(Name = "Enter Text")]

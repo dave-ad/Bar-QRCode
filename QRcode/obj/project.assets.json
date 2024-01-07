@@ -1776,9 +1776,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\CodeGen.csproj",
-      "projectName": "CodeGen",
-      "projectPath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\CodeGen.csproj",
+      "projectUniqueName": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\Bar-QR Code MVC.csproj",
+      "projectName": "Bar-QR Code MVC",
+      "projectPath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\Bar-QR Code MVC.csproj",
       "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\obj\\",
       "projectStyle": "PackageReference",

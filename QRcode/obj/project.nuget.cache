@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rBGdV5KoACIpK0huzVA+9idGO1DjlOODIHfABUMLSNsCrIHSkXvdwiqmFYoDBASNdYNgxnV2XAfVk4PHB04qfw==",
+  "dgSpecHash": "uiaNRr4EvC3Yh55rw1Q3lru3Hszlcqq4MJSTvKii4ZUIxRz8ZS9UREURjhXKi/nDmaqEpJV3RMT6e36NS/klYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\CodeGen.csproj",
+  "projectFilePath": "C:\\Users\\David\\source\\repos\\Bar-QRCode\\QRcode\\Bar-QR Code MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\David\\.nuget\\packages\\barcode\\2023.12.4\\barcode.2023.12.4.nupkg.sha512",
     "C:\\Users\\David\\.nuget\\packages\\barcode.slim\\2023.12.4\\barcode.slim.2023.12.4.nupkg.sha512",

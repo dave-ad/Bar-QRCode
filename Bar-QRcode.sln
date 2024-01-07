@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeGen", "QRcode\CodeGen.csproj", "{44BBF55F-AB83-482E-A7FE-0838176B9151}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bar-QR Code MVC", "QRcode\Bar-QR Code MVC.csproj", "{44BBF55F-AB83-482E-A7FE-0838176B9151}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRCodeService", "QRCodeService\QRCodeService.csproj", "{2AFEC04A-A15F-42D0-BC9D-BA2E5228A975}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarCodeService", "BarCodeService\BarCodeService.csproj", "{38DD18FD-FAC1-42C2-A1F1-D2FB44523864}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bar-QR Code API", "Bar-QR Code API\Bar-QR Code API.csproj", "{8464A512-2276-4F63-84A4-5F728E41538F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{38DD18FD-FAC1-42C2-A1F1-D2FB44523864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38DD18FD-FAC1-42C2-A1F1-D2FB44523864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38DD18FD-FAC1-42C2-A1F1-D2FB44523864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8464A512-2276-4F63-84A4-5F728E41538F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8464A512-2276-4F63-84A4-5F728E41538F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8464A512-2276-4F63-84A4-5F728E41538F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8464A512-2276-4F63-84A4-5F728E41538F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
